@@ -1,0 +1,46 @@
+{
+    "name": "python-container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+        // "args": {}
+    },
+    "shutdownAction": "stopContainer",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Manually copy your user's VCS extensions to the DevContainer
+                //  by generating a .txt file with the list of extensions with:
+                //  code --list-extensions | sed -e 's/^/    "/' -e 's/$/",/' | sed '$ s/,$//' > extensions.txt
+                "charliermarsh.ruff",
+                "dracula-theme.theme-dracula",
+                "eamodio.gitlens",
+                "github.codespaces",
+                "github.copilot",
+                "github.copilot-chat",
+                "github.remotehub",
+                "github.vscode-github-actions",
+                "matangover.mypy",
+                "mechatroner.rainbow-csv",
+                "ms-azuretools.vscode-docker",
+                "ms-python.debugpy",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "ms-vscode-remote.remote-containers",
+                "ms-vscode-remote.remote-ssh",
+                "ms-vscode-remote.remote-ssh-edit",
+                "ms-vscode-remote.remote-wsl",
+                "ms-vscode-remote.vscode-remote-extensionpack",
+                "ms-vscode.remote-explorer",
+                "ms-vscode.remote-repositories",
+                "ms-vscode.remote-server",
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
+}   
