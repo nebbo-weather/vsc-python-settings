@@ -79,14 +79,14 @@ Let's set them up:
 
 ## Usage example
 
-### `Ruff` formatter
+### Ruff formatter
 
 ![`Ruff` formatter](.assets/formatter.gif)
 
-### `PyLance` linter
+### PyLance linter
 
 ![`PyLance` linter](.assets/linter.gif)
 
-### `mypy` type checker
+### mypy type checker
 
 ![`mypy` type checker](.assets/type-checker.gif)
