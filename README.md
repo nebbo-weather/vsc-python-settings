@@ -32,6 +32,7 @@ Let's set them up:
     [mypy]
     check_untyped_defs = True
     ```   
+    - **Note** you can locally disable the type checker for in a specific line commenting `# type: ignore`
 - [ ] Install the corresponding VSC extensions in the `.devcontainer/devcontainer.json` file
     - In general, you will want to have the same extensions as locally. You can run:
     ```bash
@@ -75,3 +76,17 @@ Let's set them up:
     }
     ```
     Even though those before the `# Auto-save feature` comment are purely personal preferences.
+
+## Usage example
+
+### `Ruff` formatter
+
+![`Ruff` formatter](.assets/formatter.gif)
+
+### `PyLance` linter
+
+![`PyLance` linter](.assets/linter.gif)
+
+### `mypy` type checker
+
+![`mypy` type checker](.assets/type-checker.gif)
