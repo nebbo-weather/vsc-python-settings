@@ -8,14 +8,27 @@ you may use (adjusting the libraries' versions accordingly)
 
 ## Recommendation
 
-[Cursor](https://www.cursor.com) is built on top of VSC and provides a better development experience because of its greatly improved AI completions and interactions (compared to Copilot). Once VSC code has been set up (and synced with your GitHub user), `cursor` is definitely worth trying. It can be quickly installed with the executable in Windows or MAC, or in Ubuntu by:
+[Cursor](https://www.cursor.com) is built on top of VSC and provides a better development experience because of its greatly improved AI completions and interactions (compared to Copilot). Once VSC code has been set up (and synced with your GitHub user), `cursor` is definitely worth trying since it will be able to automatically import all your extensions and settings from VSC. It can be quickly installed with the executable in Windows or MAC, or in Ubuntu by [downloading the `cursor-*.appImage` binary](https://www.cursor.com/) and:
 
 ```bash
-sudo apt update && sudo apt install fuse  # optionally, `sudo apt install libfuse2` too
-chmod +x ./cursor-<version>.AppImage && ./cursor-<version>.AppImage
+sudo apt install libfuse2t64  # for Ubuntu 24.04, in 22.04 is: libfuse2
+chmod +x ./cursor-<version>.AppImage
+mv cursor-<version>.AppImage /opt/cursor.appimage
 ```
+Then do `sudo vim /usr/share/applications/app.desktop` & add:
+```bash
+[Desktop Entry]
+Name=Cursor
+Exec=/opt/cursor.appimage --no-sandbox &
+Icon=<PATH-OF-CURSOR-ICON>
+Type=Application
+Categories=Development;
+```
+Where `<PATH-OF-CURSOR-ICON>` is the path of the app's `.jpg` icon you have to download from Internet. 
 
-Once installed it will be able to automatically import all your extensions and settings from VSC and just start (no)coding!
+### Important note
+
+It **is important to remind** NOT to [install `fuse` or it may break your system if you have `gnome` installed](https://askubuntu.com/questions/1409496/how-to-safely-install-fuse-on-ubuntu-22-04).
 
 ## Guide
 
