@@ -92,6 +92,11 @@ Let's set them up:
         // # Auto-save feature
         "files.autoSave": "afterDelay", 
         "files.autoSaveDelay": 1000,  // after 1 second
+        // Markdown settings
+        "[markdown]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true,
+        },
 
         // # Python settings
         "[python]": {
